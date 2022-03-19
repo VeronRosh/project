@@ -1,5 +1,6 @@
-
-
+const btnConv = document.querySelector('.converter__btn');
+const inputConv = document.querySelector('.converter__input');
+const score = document.querySelector('.converter__score-text');
 
 
 let celsius 
