@@ -75,7 +75,7 @@ body {
   top: -30px;
   padding: 1em 2em;
   font-size: 1.8rem;
-  color: #fff;
+  color: rgba(126, 121, 121, 0.712);
   border-bottom: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
@@ -94,12 +94,8 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   overflow: hidden;
-  -webkit-transition: .3s border;
-  transition: .3s border;
-}
-
-.converter__btn:hover {
-  border: 2px solid rgba(233, 227, 227, 0.658);
+  -webkit-transition: 0.3s border;
+  transition: 0.3s border;
 }
 
 .converter__btn::before, .converter__btn::after {
@@ -129,10 +125,16 @@ body {
   width: 160px;
   height: 50px;
   padding: 0.5em;
+  -webkit-transition: 0.3s border;
+  transition: 0.3s border;
 }
 
-.converter__input:focus {
+.converter__input:focus, .converter__btn:focus {
   outline: none;
+  border: 2px solid rgba(233, 227, 227, 0.658);
+}
+
+.converter__input:hover, .converter__btn:hover {
   border: 2px solid rgba(233, 227, 227, 0.658);
 }
 /*# sourceMappingURL=style.css.map */
