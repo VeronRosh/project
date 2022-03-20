@@ -13,13 +13,21 @@
 	<body>
 		
 	<div class="converter">
-		<h2 class="converter__title">Konwerter st. Celsjusza</h2>
+		<h2 class="converter__title" id="title">Konwerter st. Celsjusza</h2>
 
 		<div class="converter__components">
-			<input class="converter__input converter__common-properties" type="number" value="0">
-			<button class="converter__btn converter__common-properties">Sprawdź</button>
+			<!-- value which will be change -->
+			<input class="converter__input converter__common-properties" type="number" id="input-set" value="0">
+			<!-- button which switch on app -->
+			<button class="converter__btn converter__common-properties" id="btn-check">sprawdź</button>
+			<!-- Cesjusz/Fahrenheit -->
+			<button class="converter__btn converter__btn-deg-cel" id="btn-check">C</button>
+			<span class="converter__tooltip converter__tooltip-cel">Zamień na stopnie Celsjusza</span>
+			<button class="converter__btn converter__btn-deg-far" id="btn-check">F</button>
+			<span class="converter__tooltip converter__tooltip-far">Zamień na stopnie Fahrenheita</span>
+			<!-- Information/Score -->
 			<div class="converter__score">
-				<p class="converter__score-text">wynik</p>
+				<p class="converter__score-text" id="score">wynik</p>
 			</div>
 		</div>
 	</div>

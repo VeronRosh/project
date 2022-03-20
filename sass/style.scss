@@ -29,6 +29,47 @@ body {
 	border: 2px solid rgb(31, 165, 199);
 	border-radius: 10px;
 
+	&__tooltip{
+		position: absolute;
+		transform: translateX(-50%);
+		background-color: rgba(0, 0, 0, 0.753);
+		color: #fff;
+		font-size: 1.2rem;
+		white-space: nowrap;
+		padding: 1em 1.5em;
+		border-radius: 7px;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 10;
+		transition: opacity .5s ease;
+
+	}
+	
+	&__tooltip-cel{
+		right: -8%;
+	}
+	&__tooltip-far{
+		right: -29%;
+	}
+
+	&__btn-deg-cel:hover + &__tooltip-cel,
+	&__btn-deg-far:hover + &__tooltip-far{
+		top: 15%;
+		visibility: visible;
+		opacity: 1;
+	}
+
+
+	&__tooltip::before{
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 100%;
+		transform: translateX(-50%);
+		border: 15px solid;
+		border-color: #000 #0000 #0000 #0000;
+	}
+
 	&__common-properties {
 		font-size: 1.5rem;
 		border-radius: 6px;
@@ -49,7 +90,7 @@ body {
 		top: 50%;
 		padding: 2em 0;
 		height: 150px;
-		width: 400px;
+		width: 100%;
 	}
 
 	&__score {
@@ -57,7 +98,7 @@ body {
 		top: -30px;
 		padding: 1em 2em;
 		font-size: 1.8rem;
-		color: rgba(126, 121, 121, 0.712);
+		color: rgba(255, 255, 255, 0.767);
 		border-bottom: 2px solid #fff;
 		border-bottom: 2px solid #fff;
 	}
@@ -70,6 +111,15 @@ body {
 		font-weight: 900;
 	}
 
+	&__btn-deg-cel, &__btn-deg-far{
+		border-radius: 30px;
+		background: none;
+		color: #fff;
+		border: 2px solid #fff;
+		box-shadow: inset 2px 2px 3px rgb(37, 34, 34);
+	}
+	
+
 	&__btn {
 		position: relative;
 		padding: 1em 2em;
@@ -79,15 +129,14 @@ body {
 		transition: 0.3s border;
 	}
 
-	&__btn::before,
-	&__btn::after {
+	&__btn::before{
 		content: '';
 		position: absolute;
 		display: block;
 		transition: all 0.5s;
 	}
 
-	&__btn::before {
+	&__btn::before{
 		top: 10px;
 		left: -100px;
 		height: 100%;
@@ -100,7 +149,7 @@ body {
 		transform: rotate(120deg);
 	}
 
-	&__btn:hover::before {
+	&__btn:hover::before{
 		left: 130%;
 	}
 
