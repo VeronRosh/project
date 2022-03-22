@@ -15,7 +15,6 @@ body {
 	background-color: #333;
 	font-family: 'Montserrat', sans-serif;
 }
-
 .converter {
 	position: absolute;
 	top: 50%;
@@ -41,7 +40,7 @@ body {
 		visibility: hidden;
 		opacity: 0;
 		z-index: 10;
-		transition: opacity .5s ease;
+		transition: opacity .5s .5s ease;
 
 	}
 	
@@ -111,6 +110,13 @@ body {
 		font-weight: 900;
 	}
 
+	&__subtitle{
+		color: rgba(255, 255, 255, 0.966);
+		margin-top: .5em;
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
+
 	&__btn-deg-cel, &__btn-deg-far{
 		border-radius: 30px;
 		background: none;
@@ -162,10 +168,65 @@ body {
 	&__input:focus,
 	&__btn:focus {
 		outline: none;
-		border: 2px solid rgba(233, 227, 227, 0.658);
+		border: 2px solid rgb(31, 165, 199);
+		color: rgb(31, 165, 199);
 	}
-	&__input:hover,
-	&__btn:hover {
-		border: 2px solid rgba(233, 227, 227, 0.658);
+}
+
+.modal{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 200px;
+	border-radius: 8px;
+	border: 2px solid rgba(26, 19, 19, 0.199);
+	background-color: rgba(43, 40, 40, 0.952);
+	visibility: hidden;
+	z-index: 20;
+	
+	&__cross{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		padding: .2em;
+		background-color: tomato;
+		border: 2px solid rgba(2, 2, 2, 0.596);
+		border-radius: 5px;
+		cursor: pointer;
+		transition: .3s background-color;
+
+		&:hover{
+			background-color: rgba(255, 99, 71, 0.856);
+		}
+	}
+
+	&__text{
+		font-size: 1.5rem;
+		line-height: 200px;
+		text-align: center;
+		color: #fff;
+	}
+
+	&--active{
+		visibility: visible;
+	}
+}
+
+
+//tło na modal
+.background-cover{
+	position: absolute;
+	background-color: transparent;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -5;
+	
+	&--active{
+		z-index: 10;
+		background-color: rgba(0, 0, 0, 0.541);
 	}
 }
