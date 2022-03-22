@@ -32,7 +32,7 @@ const handleConversion = () => {
         degrees = inputNumber.value;
         if(degrees != ""){
             temp = degrees * 1.8 + 32;
-            score.textContent = temp;
+            score.textContent = `${temp} °F`;
         } else {
             handleModal("Musisz wpisać jakąś wartość!");
         }
@@ -42,7 +42,7 @@ const handleConversion = () => {
         degrees = inputNumber.value;
         if(degrees != ""){
             temp = 5 / 9 * (degrees - 32)
-            score.textContent = temp;
+            score.textContent = `${temp} °C`;
         } else {
             handleModal("Musisz wpisać jakąś wartość!");
         }
@@ -56,12 +56,12 @@ const handleConversion = () => {
 }
 
 //changes the subtitle
-const subtitleCel = () =>{
+const subtitleFar = () =>{
     subtitleApp.textContent = "Celsjusz na Fahrenheit";
 
 }
 
-const subtitleFar = () =>{
+const subtitleCel = () =>{
     subtitleApp.textContent = "Fahrenheit na Celsjusz";
 }
 
